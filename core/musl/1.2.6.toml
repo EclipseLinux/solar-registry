@@ -1,0 +1,22 @@
+[package]
+name = "musl"
+version = "1.2.6"
+description = "C standard library"
+
+[source]
+url = "https://$SOLAR_CDN/packages/core/musl-$VERSION-$ARCH.tar.zst"
+sha256 = "3662761d15b494150dafa1608040c94916a4d963046b655cb1547a8d0ee39d41"
+arch = "x86_64"
+
+[build]
+# *here* is the actual source
+url = "git://git.musl-libc.org/musl"
+# sha256 = ""
+rev = "b306b16af15c89a04d8e0c55cac2dadbeb39c083" # as of july 25
+type = "make"
+deps = ["gcc", "binutils", "bash"]
+post = ["ln -s /usr/lib/libc.so /usr/lib/ld-musl-$ARCH.so.1"]
+
+[install]
+pre = [""]
+post = [""]
