@@ -2,6 +2,19 @@
 name = "musl"
 version = "1.2.6"
 description = "C standard library"
+deps = [] # should be skeleton and other stuff but this is a test
+# arch = ["x86_64"] - this works with any arch (i think?) given the right compiler so does not apply
+keywords = ["libc", "musl", "embedded"]
+
+[maintainers]
+EclipseLinux = "Eclipse Linux"
+chkc0x0 = "Chkc"
+
+[meta]
+upstream = "https://musl.libc.org/"
+# homepage - same as upstream if not specified
+license = "MIT" # can be an array too
+author = ["Rich Felker <gh:richfelker>", "musl contributors"]
 
 [build]
 # *here* is the actual source
