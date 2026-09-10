@@ -28,3 +28,12 @@ post = ["ln -s /usr/lib/libc.so /usr/lib/ld-musl-$ARCH.so.1"]
 [install]
 pre = [""]
 post = [""]
+
+# reconstruction using r2 data
+[source.x86_64]
+sha = "f42bbb40a71c0da0f15350d0277171423519766e08daf5580a1c2c753c4d9366"
+rev = 2
+commit = "b306b16"
+timestamp = 1789072603
+compressed = 719610
+uncompressed = 4089113
